@@ -1,0 +1,12 @@
+# https://stepik.org/lesson/24463/step/9?unit=6771
+
+class NonPositiveError(Exception):
+    pass
+
+class PositiveList(list):
+
+    def append(self, x):
+        if x <= 0:
+            raise NonPositiveError
+        else:
+            super().append(x)
